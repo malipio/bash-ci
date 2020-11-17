@@ -22,7 +22,7 @@ X-Hub-Signature-256: sha256=c9eae7fb099d815d5ccdbcd091697ef731deca5d4b7a67c24d8f
 {
   "ref": "refs/heads/master",
   "before": "0",
-  "after": "{{$commitId}}",
+  "after": "{{commitId}}",
   "repository": {
     "id": 311483448,
     "node_id": "MDEwOlJlcG9zaXRvcnkzMTE0ODM0NDg=",

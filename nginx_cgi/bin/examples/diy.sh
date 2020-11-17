@@ -8,11 +8,9 @@ echo Building and testing...
 chmod +x ./gradlew
 ./gradlew clean build
 
+echo Deploying to staging...
 # Note: you need to create the app yourself before to get app name
 heroku plugins:install java
-
-echo Deploying to staging...
-
 heroku jar:deploy --jdk 11 --jar build/libs/demo-0.0.1-SNAPSHOT.jar --app infinite-caverns-43687
 
 echo Component Tests
