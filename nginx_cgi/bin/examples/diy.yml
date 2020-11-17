@@ -1,0 +1,12 @@
+do_it_yourself:
+  env:
+    - HEROKU_API_KEY
+  build:
+    - ./gradlew clean build
+  staging:
+    - heroku plugins:install java
+    - heroku jar:deploy --jdk 11 --jar build/libs/demo-0.0.1-SNAPSHOT.jar --app infinite-caverns-43687
+  test:
+    - test "$(curl --fail --silent https://infinite-caverns-43687.herokuapp.com/ | jq -r '.tip')" == "Do It Yourself!"
+  production:
+    - heroku jar:deploy --jdk 11 --jar build/libs/demo-0.0.1-SNAPSHOT.jar --app quiet-shelf-20036

@@ -1,0 +1,33 @@
+version: '3'
+services:
+  bash_ci:
+    container_name: nginx_cgi
+    build:
+      dockerfile: ../Dockerfile
+      context: nginx_cgi
+    volumes:
+      - ./nginx_cgi/bin:/opt/bash-ci/bin
+      - ./nginx_cgi/cgi-bin:/var/cgi-bin
+      - ./nginx_cgi/html:/var/www
+      - ./nginx_cgi/log:/var/log/nginx/web
+    ports:
+      - "8080:80"
+    secrets:
+      - ssh_private_key
+      - known_hosts
+      - github_token
+      - heroku_api_key
+  ngrok:
+    image: wernight/ngrok
+    ports:
+      - "4040:4040"
+    command: [ "ngrok", "http", "nginx_cgi:80" ]
+secrets:
+  ssh_private_key:
+    file: .env/ssh_key.pem
+  known_hosts:
+    file: .env/known_hosts
+  github_token:
+    file: .env/github-token.txt
+  heroku_api_key:
+    file: .env/heroku-api-key.txt

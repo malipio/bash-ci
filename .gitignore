@@ -1,0 +1,4 @@
+.idea/
+.env/
+/nginx_cgi/html/builds/
+/nginx_cgi/log/*.log

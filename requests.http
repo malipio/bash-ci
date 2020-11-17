@@ -1,0 +1,230 @@
+### Check tunnel url
+GET localhost:4040/api/tunnels
+
+###
+
+### Trigger empty event
+GET http://localhost:8080/cgi-bin/github_event_dispatcher.sh
+
+### Trigger recorded event
+POST http://localhost:8080/cgi-bin/github_event_dispatcher.sh
+Accept: */*
+content-type: application/json
+User-Agent: GitHub-Hookshot/6767b47
+X-GitHub-Delivery: bf4ffa3e-22e4-11eb-9677-2079d7dfa80d
+X-GitHub-Event: push
+X-GitHub-Hook-ID: 261520931
+X-GitHub-Hook-Installation-Target-ID: 311483448
+X-GitHub-Hook-Installation-Target-Type: repository
+X-Hub-Signature: sha1=38f11bc73e30c4d1b9946b03ed1d8b5e9922cbc2
+X-Hub-Signature-256: sha256=c9eae7fb099d815d5ccdbcd091697ef731deca5d4b7a67c24d8f299e7db6f3e0
+
+{
+  "ref": "refs/heads/master",
+  "before": "0",
+  "after": "{{$commitId}}",
+  "repository": {
+    "id": 311483448,
+    "node_id": "MDEwOlJlcG9zaXRvcnkzMTE0ODM0NDg=",
+    "name": "demo-app",
+    "full_name": "malipio/demo-app",
+    "private": false,
+    "owner": {
+      "name": "malipio",
+      "email": "malipio@users.noreply.github.com",
+      "login": "malipio",
+      "id": 9479731,
+      "node_id": "MDQ6VXNlcjk0Nzk3MzE=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9479731?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/malipio",
+      "html_url": "https://github.com/malipio",
+      "followers_url": "https://api.github.com/users/malipio/followers",
+      "following_url": "https://api.github.com/users/malipio/following{/other_user}",
+      "gists_url": "https://api.github.com/users/malipio/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/malipio/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/malipio/subscriptions",
+      "organizations_url": "https://api.github.com/users/malipio/orgs",
+      "repos_url": "https://api.github.com/users/malipio/repos",
+      "events_url": "https://api.github.com/users/malipio/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/malipio/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/malipio/demo-app",
+    "description": null,
+    "fork": false,
+    "url": "https://github.com/malipio/demo-app",
+    "forks_url": "https://api.github.com/repos/malipio/demo-app/forks",
+    "keys_url": "https://api.github.com/repos/malipio/demo-app/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/malipio/demo-app/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/malipio/demo-app/teams",
+    "hooks_url": "https://api.github.com/repos/malipio/demo-app/hooks",
+    "issue_events_url": "https://api.github.com/repos/malipio/demo-app/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/malipio/demo-app/events",
+    "assignees_url": "https://api.github.com/repos/malipio/demo-app/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/malipio/demo-app/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/malipio/demo-app/tags",
+    "blobs_url": "https://api.github.com/repos/malipio/demo-app/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/malipio/demo-app/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/malipio/demo-app/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/malipio/demo-app/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/malipio/demo-app/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/malipio/demo-app/languages",
+    "stargazers_url": "https://api.github.com/repos/malipio/demo-app/stargazers",
+    "contributors_url": "https://api.github.com/repos/malipio/demo-app/contributors",
+    "subscribers_url": "https://api.github.com/repos/malipio/demo-app/subscribers",
+    "subscription_url": "https://api.github.com/repos/malipio/demo-app/subscription",
+    "commits_url": "https://api.github.com/repos/malipio/demo-app/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/malipio/demo-app/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/malipio/demo-app/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/malipio/demo-app/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/malipio/demo-app/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/malipio/demo-app/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/malipio/demo-app/merges",
+    "archive_url": "https://api.github.com/repos/malipio/demo-app/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/malipio/demo-app/downloads",
+    "issues_url": "https://api.github.com/repos/malipio/demo-app/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/malipio/demo-app/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/malipio/demo-app/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/malipio/demo-app/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/malipio/demo-app/labels{/name}",
+    "releases_url": "https://api.github.com/repos/malipio/demo-app/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/malipio/demo-app/deployments",
+    "created_at": 1604961698,
+    "updated_at": "2020-11-09T23:39:04Z",
+    "pushed_at": 1605199326,
+    "git_url": "git://github.com/malipio/demo-app.git",
+    "ssh_url": "git@github.com:malipio/demo-app.git",
+    "clone_url": "https://github.com/malipio/demo-app.git",
+    "svn_url": "https://github.com/malipio/demo-app",
+    "homepage": null,
+    "size": 57,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "Java",
+    "has_issues": false,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "master",
+    "stargazers": 0,
+    "master_branch": "master"
+  },
+  "pusher": {
+    "name": "malipio",
+    "email": "malipio@users.noreply.github.com"
+  },
+  "sender": {
+    "login": "malipio",
+    "id": 9479731,
+    "node_id": "MDQ6VXNlcjk0Nzk3MzE=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/9479731?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/malipio",
+    "html_url": "https://github.com/malipio",
+    "followers_url": "https://api.github.com/users/malipio/followers",
+    "following_url": "https://api.github.com/users/malipio/following{/other_user}",
+    "gists_url": "https://api.github.com/users/malipio/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/malipio/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/malipio/subscriptions",
+    "organizations_url": "https://api.github.com/users/malipio/orgs",
+    "repos_url": "https://api.github.com/users/malipio/repos",
+    "events_url": "https://api.github.com/users/malipio/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/malipio/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "created": false,
+  "deleted": false,
+  "forced": false,
+  "base_ref": null,
+  "compare": "https://github.com/malipio/demo-app/compare/f1321557ff6b...5218b7a3a564",
+  "commits": [
+    {
+      "id": "5218b7a3a564f966c9fe7cb4ef6caf3b566ed634",
+      "tree_id": "4db09216f24dc38d897abf6cca9ef4b37e88b346",
+      "distinct": true,
+      "message": "Exposing REST endpoints",
+      "timestamp": "2020-11-12T17:28:33+01:00",
+      "url": "https://github.com/malipio/demo-app/commit/5218b7a3a564f966c9fe7cb4ef6caf3b566ed634",
+      "author": {
+        "name": "Piotr Malinowski",
+        "email": "pima@netcompany.com",
+        "username": "nc-pima"
+      },
+      "committer": {
+        "name": "Piotr Malinowski",
+        "email": "pima@netcompany.com",
+        "username": "nc-pima"
+      },
+      "added": [
+        "src/main/java/com/example/demo/DemoRestController.java"
+      ],
+      "removed": [
+
+      ],
+      "modified": [
+        "build.gradle",
+        "src/main/resources/application.properties",
+        "src/test/java/com/example/demo/DemoApplicationTests.java"
+      ]
+    }
+  ],
+  "head_commit": {
+    "id": "5218b7a3a564f966c9fe7cb4ef6caf3b566ed634",
+    "tree_id": "4db09216f24dc38d897abf6cca9ef4b37e88b346",
+    "distinct": true,
+    "message": "Exposing REST endpoints",
+    "timestamp": "2020-11-12T17:28:33+01:00",
+    "url": "https://github.com/malipio/demo-app/commit/5218b7a3a564f966c9fe7cb4ef6caf3b566ed634",
+    "author": {
+      "name": "Piotr Malinowski",
+      "email": "pima@netcompany.com",
+      "username": "nc-pima"
+    },
+    "committer": {
+      "name": "Piotr Malinowski",
+      "email": "pima@netcompany.com",
+      "username": "nc-pima"
+    },
+    "added": [
+      "src/main/java/com/example/demo/DemoRestController.java"
+    ],
+    "removed": [
+
+    ],
+    "modified": [
+      "build.gradle",
+      "src/main/resources/application.properties",
+      "src/test/java/com/example/demo/DemoApplicationTests.java"
+    ]
+  }
+}
+
+### Get build log
+GET http://localhost:8080/builds/demo-app/log/{{commitId}}
+
+### Get latest build log
+GET http://localhost:8080/builds/demo-app/log/latest
+
+### Get a list of successful builds
+GET http://localhost:8080/builds/demo-app/success
+###
+
+### Get a list of failed builds
+GET http://localhost:8080/builds/demo-app/failure
+###
+
+## Visit staging app
+GET https://infinite-caverns-43687.herokuapp.com/
